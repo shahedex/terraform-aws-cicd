@@ -39,3 +39,7 @@ variable "github_token" {
 output "web_public_url" {
   value = aws_s3_bucket.static_web_bucket.website_endpoint
 }
+
+output "cloudfront_public_url" {
+  value = aws_cloudfront_distribution.codepipeline[0].domain_name
+}
